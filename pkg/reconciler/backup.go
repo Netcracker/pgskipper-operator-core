@@ -40,7 +40,7 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 	// backupDaemon := &cr.Spec.BackupDaemon
 	nodes := backupDaemon.Storage.Nodes
 	pgHost := backupDaemon.PgHost
-	sslMode := "disable"
+	sslMode := "prefer"
 	if backupDaemon.SslMode != "" {
 		sslMode = backupDaemon.SslMode
 	}

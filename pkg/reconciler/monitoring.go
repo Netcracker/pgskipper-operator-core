@@ -40,7 +40,7 @@ const (
 
 func NewMonitoringDeployment(metricCollector *types.MetricCollector, pgcluster string, serviceAccountName string) *appsv1.Deployment {
 	// metricCollector := cr.Spec.MetricCollector
-	sslMode := "disable"
+	sslMode := "prefer"
 	if metricCollector.SslMode != "" {
 		sslMode = metricCollector.SslMode
 	}
