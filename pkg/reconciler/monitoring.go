@@ -33,7 +33,7 @@ var (
 
 const (
 	MetricCollectorDeploymentName  = "monitoring-collector"
-	metricCollectorUserCredentials = "monitoring-user-credentials"
+	MetricCollectorUserCredentials = "monitoring-credentials"
 	influxDbAdminCredentials       = "influx-db-admin-credentials"
 	telegrafConfig                 = "telegraf-configmap"
 )
@@ -86,7 +86,7 @@ func NewMonitoringDeployment(metricCollector *types.MetricCollector, pgcluster s
 									Name: "MONITORING_USER",
 									ValueFrom: &corev1.EnvVarSource{
 										SecretKeyRef: &corev1.SecretKeySelector{
-											LocalObjectReference: corev1.LocalObjectReference{Name: metricCollectorUserCredentials},
+											LocalObjectReference: corev1.LocalObjectReference{Name: MetricCollectorUserCredentials},
 											Key:                  "username",
 										},
 									},
@@ -95,7 +95,7 @@ func NewMonitoringDeployment(metricCollector *types.MetricCollector, pgcluster s
 									Name: "MONITORING_PASSWORD",
 									ValueFrom: &corev1.EnvVarSource{
 										SecretKeyRef: &corev1.SecretKeySelector{
-											LocalObjectReference: corev1.LocalObjectReference{Name: metricCollectorUserCredentials},
+											LocalObjectReference: corev1.LocalObjectReference{Name: MetricCollectorUserCredentials},
 											Key:                  "password",
 										},
 									},
