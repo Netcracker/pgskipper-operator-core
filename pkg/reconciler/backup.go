@@ -135,6 +135,10 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 									Value: backupDaemon.JobFlag,
 								},
 								{
+									Name:  "CONNECT_TIMEOUT",
+									Value: backupDaemon.ConnectTimeout,
+								},
+								{
 									Name:  "ALLOW_PREFIX",
 									Value: strconv.FormatBool(backupDaemon.AllowPrefix),
 								},

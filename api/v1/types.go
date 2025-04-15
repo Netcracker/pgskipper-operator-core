@@ -31,6 +31,7 @@ type BackupDaemon struct {
 	BackupSchedule         string                   `json:"backupSchedule,omitempty"`
 	GranularEviction       string                   `json:"granularEviction,omitempty"`
 	JobFlag                string                   `json:"jobFlag,omitempty"`
+	ConnectTimeout         string                   `json:"connectTimeout,omitempty"`
 	GranularBackupSchedule string                   `json:"granularBackupSchedule,omitempty"`
 	DatabasesToSchedule    string                   `json:"databasesToSchedule,omitempty"`
 	WalArchiving           bool                     `json:"walArchiving,omitempty"`
