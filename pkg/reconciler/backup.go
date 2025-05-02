@@ -143,6 +143,10 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 									Value: strconv.FormatBool(backupDaemon.AllowPrefix),
 								},
 								{
+									Name:  "EXCLUDED_EXTENSIONS",
+									Value: backupDaemon.ExcludedExtensions,
+								},
+								{
 									Name:  "GRANULAR_BACKUP_SCHEDULE",
 									Value: backupDaemon.GranularBackupSchedule,
 								},

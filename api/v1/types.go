@@ -36,6 +36,7 @@ type BackupDaemon struct {
 	DatabasesToSchedule    string                   `json:"databasesToSchedule,omitempty"`
 	WalArchiving           bool                     `json:"walArchiving,omitempty"`
 	AllowPrefix            bool                     `json:"allowPrefix,omitempty"`
+	ExcludedExtensions     string                   `json:"excludedExtensions,omitempty"`
 	UseEvictionPolicyFirst string                   `json:"useEvictionPolicyFirst,omitempty"`
 	EvictionBinaryPolicy   string                   `json:"evictionBinaryPolicy,omitempty"`
 	ArchiveEvictionPolicy  string                   `json:"archiveEvictionPolicy,omitempty"`
