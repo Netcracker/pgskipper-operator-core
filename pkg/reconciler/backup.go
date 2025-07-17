@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Netcracker/pgskipper-operator-core/api/v1"
+	types "github.com/Netcracker/pgskipper-operator-core/api/v1"
 	"github.com/Netcracker/pgskipper-operator-core/pkg/storage"
 	"github.com/Netcracker/pgskipper-operator-core/pkg/util"
 	appsv1 "k8s.io/api/apps/v1"
@@ -145,6 +145,10 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 								{
 									Name:  "EXCLUDED_EXTENSIONS",
 									Value: backupDaemon.ExcludedExtensions,
+								},
+								{
+									Name:  "COMPRESSION_LEVEL",
+									Value: strconv.Itoa(backupDaemon.CompressionLevel),
 								},
 								{
 									Name:  "GRANULAR_BACKUP_SCHEDULE",

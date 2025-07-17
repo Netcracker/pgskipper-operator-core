@@ -37,6 +37,7 @@ type BackupDaemon struct {
 	WalArchiving           bool                     `json:"walArchiving,omitempty"`
 	AllowPrefix            bool                     `json:"allowPrefix,omitempty"`
 	ExcludedExtensions     string                   `json:"excludedExtensions,omitempty"`
+	CompressionLevel       int                      `json:"compressionLevel"`
 	UseEvictionPolicyFirst string                   `json:"useEvictionPolicyFirst,omitempty"`
 	EvictionBinaryPolicy   string                   `json:"evictionBinaryPolicy,omitempty"`
 	ArchiveEvictionPolicy  string                   `json:"archiveEvictionPolicy,omitempty"`
