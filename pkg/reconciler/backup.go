@@ -151,6 +151,10 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 									Value: strconv.Itoa(backupDaemon.CompressionLevel),
 								},
 								{
+									Name:  "ENCRYPTION",
+									Value: backupDaemon.Encryption,
+								},
+								{
 									Name:  "GRANULAR_BACKUP_SCHEDULE",
 									Value: backupDaemon.GranularBackupSchedule,
 								},
