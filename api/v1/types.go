@@ -39,6 +39,7 @@ type BackupDaemon struct {
 	ExcludedExtensions     string                   `json:"excludedExtensions,omitempty"`
 	CompressionLevel       int                      `json:"compressionLevel"`
 	Encryption             string                   `json:"encryption,omitempty"`
+	BackupTimeout          int                      `json:"backupTimeout,omitempty"`
 	UseEvictionPolicyFirst string                   `json:"useEvictionPolicyFirst,omitempty"`
 	EvictionBinaryPolicy   string                   `json:"evictionBinaryPolicy,omitempty"`
 	ArchiveEvictionPolicy  string                   `json:"archiveEvictionPolicy,omitempty"`

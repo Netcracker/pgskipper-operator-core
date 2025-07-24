@@ -155,6 +155,10 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 									Value: backupDaemon.Encryption,
 								},
 								{
+									Name:  "BACKUP_TIMEOUT",
+									Value: strconv.Itoa(backupDaemon.BackupTimeout),
+								},
+								{
 									Name:  "GRANULAR_BACKUP_SCHEDULE",
 									Value: backupDaemon.GranularBackupSchedule,
 								},
