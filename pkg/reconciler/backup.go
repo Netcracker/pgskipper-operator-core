@@ -152,7 +152,7 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 								},
 								{
 									Name:  "ENCRYPTION",
-									Value: backupDaemon.Encryption,
+									Value: strconv.FormatBool(backupDaemon.Encryption),
 								},
 								{
 									Name:  "BACKUP_TIMEOUT",
