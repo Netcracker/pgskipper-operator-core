@@ -155,6 +155,10 @@ func NewBackupDaemonDeployment(backupDaemon *types.BackupDaemon, pgClusterName s
 									Value: strconv.FormatBool(backupDaemon.Encryption),
 								},
 								{
+									Name:  "RETAIN_ARCHIVE_SETTINGS",
+									Value: strconv.FormatBool(backupDaemon.RetainArchiveSettings),
+								},
+								{
 									Name:  "BACKUP_TIMEOUT",
 									Value: strconv.Itoa(backupDaemon.BackupTimeout),
 								},
