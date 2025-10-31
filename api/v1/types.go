@@ -37,7 +37,7 @@ type BackupDaemon struct {
 	WalArchiving           bool                     `json:"walArchiving,omitempty"`
 	AllowPrefix            bool                     `json:"allowPrefix,omitempty"`
 	ExcludedExtensions     string                   `json:"excludedExtensions,omitempty"`
-	CompressionLevel       int                      `json:"compressionLevel"`
+	CompressionLevel       int                      `json:"compressionLevel,omitempty"`
 	Encryption             bool                     `json:"encryption,omitempty"`
 	RetainArchiveSettings  bool                     `json:"retainArchiveSettings,omitempty"`
 	BackupTimeout          int                      `json:"backupTimeout,omitempty"`
