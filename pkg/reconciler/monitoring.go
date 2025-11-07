@@ -27,7 +27,7 @@ import (
 )
 
 var (
-	MetricCollectorLabels = map[string]string{"app": "monitoring-collector"}
+	MetricCollectorLabels = map[string]string{"app": "monitoring-collector", "app.kubernetes.io/component": "monitoring"}
 	logger                = util.GetLogger()
 )
 
